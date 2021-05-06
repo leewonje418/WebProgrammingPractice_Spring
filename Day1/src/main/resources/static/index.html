@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script> src="http://code.jquery.com/jquery-3.3.1.min.js"</script>
+</head>
+<body>
+    <div>
+        <form method="get" action="/greeting">
+            <input name="say">
+            <input name="to">
+            <button>Submit</button>
+        </form>
+    </div>
+    <div>
+        <input id="say" placeholder="인사말">
+        <input id="to" placeholder="대상">
+        <button onclick="send()">Submit</button>
+        <script>
+            function send() {
+                let say = $("#say").val();
+                let to = $("#to").val();
+                location.href = "greeting1/" + say + "/" + to;
+            }
+        </script>
+    </div>
+</body>
+</html>
